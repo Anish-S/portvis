@@ -19,13 +19,6 @@
 
 
 
-
-                $rootScope.tempSession = {
-                        user: 'chaseflow',
-                        password: 'chaseflow1'
-                    };
-
-
                 }
                 ]);
 
