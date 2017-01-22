@@ -36,10 +36,15 @@
                                 <div class="col-md-2">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p class="containerItem">{{ container.item }} <b>-{{ container.po }}</b></p>
+                                            <p class="containerItem">{{ container.item }}</p>
                                         </div>
                                         <div class="col-md-12">
-                                            <b class="containerItemOrdered">Ordered: {{ container.orderdate }}</b>
+                                            <b class="containerItemOrdered">
+                                                Ordered: <b>{{ container.orderdate }}</b>
+                                            </b>
+                                            <b class="containerItemOrdered">
+                                                Purchase Order: <b>{{ container.po }}</b>  
+                                            </b>
                                         </div>
                                     </div>
                                 </div>
