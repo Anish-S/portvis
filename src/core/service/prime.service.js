@@ -23,7 +23,7 @@
             var deferred = $q.defer();
 
             $http({
-                url: 'http://ec2-54-235-229-245.compute-1.amazonaws.com:8080/user/the_von',
+                url: 'http://ec2-54-235-229-245.compute-1.amazonaws.com:8080/user/kasper',
                 method: "GET",
                 headers: {'Content-Type': 'application/json'}
             }).then(function (response) {

@@ -44,6 +44,7 @@ module.exports = function (config) {
                 ]
             },
             ghostMode: false,
+            port: 8082,
             injectChanges: true,
             logFileChanges: true,
             logLevel: 'info',
