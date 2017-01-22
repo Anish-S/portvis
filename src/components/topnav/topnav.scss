@@ -1,0 +1,25 @@
+.navbar {
+    background: #23272B;
+    z-index: 99;
+    height: 62px;
+    border: none;
+
+    p {
+        color: #fff;
+        float: right;
+        margin-top: 20px;
+
+        i {
+            background: rgba(255,255,255,0.9);
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 18px;
+            color: #23272B;
+            top: 3px;
+            margin-left: 5px;
+        }
+
+    }
+
+
+}

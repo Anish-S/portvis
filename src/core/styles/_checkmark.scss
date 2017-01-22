@@ -1,0 +1,102 @@
+.control {
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control__indicator {
+    position: relative;
+    top: 2px;
+    width: 35px;
+    height: 35px;
+    background: rgba(22, 212, 110, 0.2);
+    border-radius: 30px;
+}
+
+.control--radio .control__indicator {
+    border-radius: 50%;
+}
+
+
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+    background: rgb(43,168,84);
+}
+
+.on-time {
+    .control input:checked ~ .control__indicator {
+        background: #fff !important;
+    }
+}
+
+/* Disabled state */
+.control input:disabled ~ .control__indicator {
+    pointer-events: none;
+    opacity: .6;
+    background: #e6e6e6;
+}
+
+/* Check mark */
+.control__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+/* Checkbox tick */
+.control--checkbox .control__indicator:after {
+    top: 4px;
+    left: 13px;
+    width: 10px;
+    height: 26px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: solid #fff;
+    border-width: 0 5px 5px 0;
+}
+
+.on-time {
+    .control--checkbox .control__indicator:after {
+
+        top: 4px;
+        left: 13px;
+        width: 10px;
+        height: 26px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border: solid #16D46E;
+        border-width: 0 5px 5px 0;
+
+    }
+}
+
+/* Disabled tick colour */
+.control--checkbox input:disabled ~ .control__indicator:after {
+    border-color: #7b7b7b;
+}
+
+/* Radio button inner circle */
+.control--radio .control__indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+/* Disabled circle colour */
+.control--radio input:disabled ~ .control__indicator:after {
+    background: #7b7b7b;
+}

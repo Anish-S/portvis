@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Package: {{ container.hbl }} </h3>
+
+    <span class="glyphicon glyphicon-remove" ng-click="ok()"></span>
+
+</div>
+<div class="modal-body" id="modal-body">
+
+    <div id="container" style="margin: 0 auto"></div>
+
+
+
+
+
+
+</div>
+<div class="modal-footer">
+    <div class="container1">
+        <ul class="progressbar1">
+            <li  ng-class="{'active' : location.data == true, 'pastLocation' : location.past == true}" ng-repeat="location in locationArray">{{ location.value }}</li>
+
+        </ul>
+    </div>
+</div>
+

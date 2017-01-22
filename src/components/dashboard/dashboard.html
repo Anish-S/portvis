@@ -1,0 +1,139 @@
+<section id="dashboard">
+
+
+    <div class="row">
+
+        <div class="col-md-12">
+
+
+            <div class="container-main">
+
+                <div class="container-header">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p>Packages</p>
+                            <b>{{ containerList.length }} total</b>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="glyphicon glyphicon-search"></span>
+                            <input id="search"
+                                   placeholder="What are you looking for?"
+                                   ng-model="searchContainerList"
+                                   class="form-control"
+                                   type="text"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-list">
+                    <ul class="list-group">
+                        <li class="list-group-item container-card"  ng-repeat="container in containerList | filter: searchContainerList" ng-click="trackPackage(container)">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <span uib-tooltip="View location" class="glyphicon glyphicon-map-marker"></span>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="containerItem">{{ container.item }}</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <b class="containerItemOrdered">ordered {{ container.orderdate }}</b>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3"></div>
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <p>Equip #</p>
+                                            <b>{{ container.equip_no }}</b>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p>Container ID</p>
+                                            <b>{{ container.hbl }}</b>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <p>Quantity</p>
+                                            <b>{{ container.quantity }}</b>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p>Arrival Info</p>
+                                            <b>{{ container.pdel_city }}, {{ container.pdel_ar }}</b>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+      <!--  <div class="col-md-12">
+
+
+            <div class="container-table">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th colspan="6">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <p>Packages in transit</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    <input id="search"
+                                           placeholder="What are you looking for?"
+                                           ng-model="searchContainerList"
+                                           class="form-control"
+                                           type="text"/>
+                                </div>
+                            </div>
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Destination</th>
+                        <th>Weight</th>
+                        <th>Temperature</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="container in containerList | filter: searchContainerList" ng-click="trackPackage(container)">
+
+                        <td>{{ container.id }}</td>
+                        <td>{{ container.name }}</td>
+                        <td>{{ container.type }}</td>
+                        <td>{{ container.destination }}</td>
+                        <td>{{ container.weight }}</td>
+                        <td>{{ container.temperature }} &#8451;</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>-->
+
+    </div>
+
+
+
+
+</section>

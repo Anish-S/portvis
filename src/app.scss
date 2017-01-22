@@ -1,0 +1,226 @@
+@import "core/styles/variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "core/styles/core";
+@import "core/styles/checkmark";
+
+/* Custom PRIME App scss files */
+@import "components/login/login.scss";
+@import "components/topnav/topnav.scss";
+@import "components/dashboard/dashboard.scss";
+
+@media (min-width: 1200px) {
+
+    .container {
+        width: 1400px;
+    }
+
+}
+
+
+
+html {
+    height: 100%;
+}
+
+body {
+    padding-top: 0;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;
+    background: #16191C;
+
+}
+p {
+    margin-bottom: 0;
+}
+
+/* state transitions */
+.main.ng-enter {
+    transition: 0.25s;
+    opacity: 0;
+}
+
+.main.ng-enter-active {
+    opacity: 1;
+}
+
+.main.ng-leave {
+    transition: 0.25s;
+    opacity: 1;
+}
+
+.main.ng-leave-active {
+    opacity: 0;
+}
+/* state transitions */
+
+/* Tooltip Styles */
+
+.tooltip-inner {
+    padding: 5px;
+    background-color: rgb(10,67,134);
+    border:  2px solid rgb(10,67,134);
+    margin-top: -15px;
+    font-size: 13px;
+    color: #fff;
+    font-weight:bold;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: rgb(10,67,134);
+}
+
+/* Tooltip Styles */
+
+
+/* container modal styles */
+.modal-lg {
+    width: 1200px;
+}
+
+.modal-content {
+
+    background: #25292E;
+
+    .modal-header {
+        color: #fff;
+        border-bottom: 1px solid rgba(204,204,204,0.1);
+
+        h3 {
+            display: inline-block;
+        }
+        span {
+            background: rgba(37, 41, 46, 0.8);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            padding: 8px;
+            font-size: 14px;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .modal-body {
+
+        .highcharts-container {
+
+            .highcharts-legend {
+                display: none;
+            }
+
+            .highcharts-series-group {
+                .highcharts-series {
+                    path {
+                        stroke: rgb(11,110,253);
+                    };
+                }
+                .highcharts-markers {
+                    .highcharts-point {
+                        fill: #FFDC00;
+                        stroke: #FFDC00;
+                    }
+                }
+
+            }
+
+        }
+
+
+
+
+
+
+    }
+
+    .modal-footer {
+        border-top: none;
+
+        .pastLocation {
+            color: rgba(65,64,66,0.9) !important;
+        }
+
+        .container1 {
+            width: 600px;
+            margin: auto;
+        }
+        .progressbar1 {
+            counter-reset: step;
+        }
+        .progressbar1 li {
+            list-style-type: none;
+            width: 25%;
+            float: left;
+            font-size: 12px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgba(65,64,66,0.9) !important;
+            font-weight:bold;
+        }
+        .progressbar1 li:before {
+            width: 20px;
+            height: 20px;
+            content: '';
+            line-height: 30px;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.9);
+            position: absolute;
+            top: -25px;
+            left: 62px;
+            z-index: 999;
+        }
+        .progressbar1 li:after {
+            width: 100%;
+            height: 2px;
+            content: '';
+            position: absolute;
+            background-color: #7d7d7d;
+            top: -15px;
+            left: -50%;
+        }
+        .progressbar1 li:first-child:after {
+            content: none;
+        }
+        .progressbar1 li.active {
+            color: green !important;
+        }
+        .progressbar1 li.active:before {
+            border-color: #55b776;
+            background: #55b776;
+        }
+        .progressbar1 li.active + li:after {
+            background-color: #55b776;
+        }
+    }
+
+}
+
+
+/* container modal styles */
+
+
+
+/* overriden bootstrap styles */
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+    outline: none;
+    outline-offset: -2px;
+}
+
+.btn:active, .btn.active {
+    outline: 0;
+    background-image: none;
+    box-shadow: 0px 2px 4px #999999;
+}
+
+button {
+    &:focus {
+        outline: 0;
+    }
+}
