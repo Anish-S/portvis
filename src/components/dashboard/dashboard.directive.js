@@ -37,7 +37,6 @@
                 console.log("request done",data);
 
                 $scope.containerList = data;
-                $scope.trackPackage($scope.containerList[0]);
 
 
             });

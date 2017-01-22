@@ -36,10 +36,10 @@
                                 <div class="col-md-2">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p class="containerItem">{{ container.item }}</p>
+                                            <p class="containerItem">{{ container.item }} <b>-{{ container.po }}</b></p>
                                         </div>
                                         <div class="col-md-12">
-                                            <b class="containerItemOrdered">ordered {{ container.orderdate }}</b>
+                                            <b class="containerItemOrdered">Ordered: {{ container.orderdate }}</b>
                                         </div>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                                             <b>{{ container.equip_no }}</b>
                                         </div>
                                         <div class="col-md-2">
-                                            <p>Container ID</p>
+                                            <p>HBL</p>
                                             <b>{{ container.hbl }}</b>
                                         </div>
                                         <div class="col-md-2">
