@@ -165,7 +165,7 @@
                                 showInLegend: false
                             }, {
                                 type: 'mapbubble',
-                                color: 'rgb(131,33,85)',
+                                color: 'green',
                                 dataLabels: {
                                     enabled: true,
                                     format: '{point.capital}'
